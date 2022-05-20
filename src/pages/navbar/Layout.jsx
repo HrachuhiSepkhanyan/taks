@@ -1,31 +1,28 @@
-import { Outlet, Link } from "react-router-dom";
-import { LeftDiv, Menu, PagesButtons } from "./Layout.style";
+import { Outlet, NavLink } from "react-router-dom";
+import { LeftDiv, Customer, Home, List } from "./Layout.style";
+import homeicon from "../../images/homeicon.svg";
+import shoppinglist from "../../images/shopping-list.svg";
+import pageNo3 from "../../images/pageNo3.svg";
 
 const Layout = () => {
   return (
     <div>
       <LeftDiv>
-        <Menu>
-          <Link to="/">
-            <PagesButtons>
-              <img src="../images/dashboard-interface.png" alt="" />
-            </PagesButtons>
-          </Link>
-        </Menu>
-        <Menu>
-          <Link to="/list">
-            <PagesButtons>
-              <img src="../images/shopping-list 1.png" alt="" />
-            </PagesButtons>
-          </Link>
-        </Menu>
-        <Menu>
-          <Link to="/group">
-            <PagesButtons>
-              <img src="../images/Group (1).png" alt="" className="group" />
-            </PagesButtons>
-          </Link>
-        </Menu>
+        <Home>
+          <NavLink to="/">
+            <img src={homeicon} alt="" />
+          </NavLink>
+        </Home>
+        <List>
+          <NavLink to="/list">
+            <img src={shoppinglist} alt="" />
+          </NavLink>
+        </List>
+        <Customer>
+          <NavLink to="/group">
+            <img src={pageNo3} alt="" />
+          </NavLink>
+        </Customer>
       </LeftDiv>
       <Outlet />
     </div>

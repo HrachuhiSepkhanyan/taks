@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import SimpleBar from "simplebar-react";
 
 import {
@@ -10,7 +10,7 @@ import {
   Favorite,
   Popular,
   Neww,
-  Main,
+  Container,
 } from "./Home.style";
 import img from "./images";
 
@@ -36,46 +36,47 @@ function Home() {
   };
 
   return (
-    <Main>
+    <Container>
       <HeaderContainer>
         <Title> Courses </Title>
-        <Link to="/">
-          <Favorite
-            onClick={() => {
-              dispatch({
-                type: "favorite",
-              });
+        <Favorite
+          onClick={() => {
+            dispatch({
+              type: "favorite",
+            });
 
-              filteredImages("favorite");
-            }}
-          >
+            filteredImages("favorite");
+          }}
+        >
+          <NavLink to="/" style={{ textDecoration: "none", hover: "none" }}>
             Favorite
-          </Favorite>
-        </Link>
-        <Link to="/">
-          <Popular
-            onClick={() => {
-              dispatch({
-                type: "popular",
-              });
-              filteredImages("popular");
-            }}
-          >
+          </NavLink>
+        </Favorite>
+        <Popular
+          onClick={() => {
+            dispatch({
+              type: "popular",
+            });
+            filteredImages("popular");
+          }}
+        >
+          <NavLink to="/" style={{ textDecoration: "none" }}>
             Popular
-          </Popular>
-        </Link>
-        <Link to="/">
-          <Neww
-            onClick={() => {
-              dispatch({
-                type: "date",
-              });
-              filteredImages("date");
-            }}
-          >
+          </NavLink>
+        </Popular>
+
+        <Neww
+          onClick={() => {
+            dispatch({
+              type: "date",
+            });
+            filteredImages("date");
+          }}
+        >
+          <NavLink to="/" style={{ textDecoration: "none" }}>
             New
-          </Neww>
-        </Link>
+          </NavLink>
+        </Neww>
       </HeaderContainer>
       <SimpleBar style={{ height: 10000 }}>
         <Images>
@@ -88,7 +89,7 @@ function Home() {
           })}
         </Images>
       </SimpleBar>
-    </Main>
+    </Container>
   );
 }
 

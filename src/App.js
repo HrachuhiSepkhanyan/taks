@@ -9,7 +9,7 @@ import "./App.style";
 function App() {
   return (
     <div>
-      <Layout />
+      <Layout path="/" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/list" element={<List />} />

@@ -1,10 +1,12 @@
 import React from "react";
-import { Page2 } from "./List.style";
+import { HeaderContainer, Title, Container } from "./List.style";
 function List() {
   return (
-    <Page2>
-      <h1>List</h1>
-    </Page2>
+    <Container>
+      <HeaderContainer>
+        <Title> Courses</Title>
+      </HeaderContainer>
+    </Container>
   );
 }
 
