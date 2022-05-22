@@ -2,22 +2,18 @@ import styled from "styled-components";
 
 export const LeftDiv = styled.div `
   position: absolute;
-  width: 160px;
+  width: 150px;
   height: 1002px;
   left: 0px;
   top: 0px;
 
   background: #ffe4d6;
   border-radius: 24px 0px 0px 0px;
-  /* position: absolute;
-  margin-top: 5px;
-  margin-left: 5px;
-  width: 160px;
-  height: 1002px;
-  left: 5px;
-  top: 5px;
-  background: #ffe4d6;
-  border-radius: 24px 0px 0px 0px; */
+  @media (max-width: 1000px) {
+    display: flex;
+    width: 100px;
+    justify-items: flex-end;
+  }
 `;
 
 export const Menu = styled.div `
@@ -32,6 +28,7 @@ export const Home = styled.div `
   height: 48px;
   left: 56px;
   top: 127px;
+
   & > a > img {
     filter: brightness(0) saturate(100%) invert(75%) sepia(2%) saturate(4286%)
       hue-rotate(327deg) brightness(96%) contrast(90%);
@@ -39,6 +36,13 @@ export const Home = styled.div `
   & :focus {
     filter: brightness(0) saturate(100%) invert(26%) sepia(41%) saturate(2081%)
       hue-rotate(234deg) brightness(97%) contrast(79%);
+  }
+  @media (max-width: 1000px) {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 26px;
+    top: 124px;
   }
 `;
 
@@ -56,6 +60,13 @@ export const List = styled.div `
     filter: brightness(0) saturate(100%) invert(26%) sepia(41%) saturate(2081%)
       hue-rotate(234deg) brightness(97%) contrast(79%);
   }
+  @media (max-width: 1000px) {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 26px;
+    top: 224px;
+  }
 `;
 
 export const Customer = styled.div `
@@ -72,6 +83,11 @@ export const Customer = styled.div `
     filter: brightness(0) saturate(100%) invert(75%) sepia(2%) saturate(4286%)
       hue-rotate(327deg) brightness(96%) contrast(90%);
   }
-  & :focus {
+  @media (max-width: 1000px) {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 26px;
+    top: 324px;
   }
 `;

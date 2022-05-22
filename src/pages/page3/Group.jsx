@@ -1,13 +1,12 @@
 import React from "react";
-import { Page3, HeaderContainer, Title } from "./Group.style";
-
+import { HeaderContainer, Title, Container } from "./Group.style";
 function Group() {
   return (
-    <Page3>
+    <Container>
       <HeaderContainer>
-        <Title>Courses</Title>
+        <Title> Courses</Title>
       </HeaderContainer>
-    </Page3>
+    </Container>
   );
 }
 

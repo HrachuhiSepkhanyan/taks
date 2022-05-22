@@ -8,13 +8,13 @@ import "./App.style";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Layout path="/" />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/list" element={<List />} />
-        <Route path="/group" element={<Group />} />
-      </Routes>
+        <Route path="/" element={<Home />} />{" "}
+        <Route path="/list" element={<List />} />{" "}
+        <Route path="/group" element={<Group />} />{" "}
+      </Routes>{" "}
     </div>
   );
 }
